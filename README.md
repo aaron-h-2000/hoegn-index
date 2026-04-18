@@ -10,9 +10,9 @@
 
 ## Overview
 
-![Pipeline overview](figures/pipeline_overview.png)
+<img width="177" height="967" alt="image" src="https://github.com/user-attachments/assets/8bdb5a39-d1b1-4afb-9fca-1fcfee27331c" />
 
-Dimensionality reduction algorithms such as UMAP, PHATE, and DIABLO are now standard tools across neuroscience, genomics, and computational biology. Yet hyperparameter selection remains largely unsystematic — researchers default to visual inspection or single-metric optimization, both of which risk silent geometric failure in one or more quality dimensions.
+Dimensionality reduction algorithms such as UMAP, PHATE, and DIABLO are now standard tools across neuroscience, genomics, and computational biology. Yet hyperparameter selection remains largely unsystematic - researchers default to visual inspection or single-metric optimization, both of which risk silent geometric failure in one or more quality dimensions.
 
 The **Hoegn Index** addresses this by implementing a maxmin robust optimization criterion: rather than maximizing any single quality metric, it identifies the parameter configuration where the *worst-performing* metric is at its best. This enforces a performance floor across all selected metrics simultaneously.
 
@@ -55,21 +55,23 @@ hoegn-index/
 ### R — run in order
 
 ```
-1. R/01_data_synthesis/
-2. R/02_design_matrices/
-3. R/03_diablo/
-4. R/04_sweepers/
+1. R/synthetic data/
+2. R/1 - deisgn matrices for DAIBLO code/
+3. R/2 - Sweepers/
+4. R/3 - Hoegn Index/
+5. R/4 - final DIABLO extraction/
+
+Points 1, 2, 3, and 4 have scripts for each data modality and each amount of components we want to retain (ncomp).
+We recommend to run this iteration for each mode and amount of ncomp extractions needed (min two, ncomp=1 and ncomp>1 given our analyses)
 ```
 
 ### Python — run in order
 
 ```
-5. Python/01_sweepers/
-6. Python/02_hoegn_index/
-7. Python/03_ground_truth/
-8. Python/04_validation/
-9. Python/05_feature_interpretation/
-10. Python/06_figures/
+5. Python/1 - param_sweeps/
+6. Python/2 - Hoegn Index/
+7. Python/3 - analyses/
+8. Python/4 - ground truth/ 
 ```
 
 > **RDS file cleanup:** When running the DIABLO sweeper and Hoegn Index scripts, delete all intermediate `.rds` files at the end of each axis cycle before starting the next. Failure to do so will cause scripts to read stale metadata from a previous run. See inline comments in `R/04_sweepers/` for details.
