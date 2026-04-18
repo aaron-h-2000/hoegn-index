@@ -3,6 +3,7 @@
 ![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)
 ![Python: 3.10](https://img.shields.io/badge/Python-3.10-brightgreen.svg)
 ![R: ≥4.2.3](https://img.shields.io/badge/R-%E2%89%A54.2.3-276DC3.svg)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19646582.svg)](https://doi.org/10.5281/zenodo.19646582)
 
 > A concise, versatile, and conservative hyperparameter selection framework for dimensionality reduction embeddings. Given any set of quality metrics and any embedding algorithm, the Hoegn Index finds the parameter configuration with the lowest chance of catastrophic metric failure — making it especially suited for multimodal neuroscience data where ground truth is unavailable and parameter choices carry high interpretive stakes.
 
@@ -115,6 +116,7 @@ Full R session info including all dependency versions is available in `requireme
 The synthetic dataset used in all analyses is publicly available on the Open Science Framework:
 
 **OSF:** [https://doi.org/10.17605/OSF.IO/86YMB](https://doi.org/10.17605/OSF.IO/86YMB)
+**Zenodo:** [https://doi.org/10.5281/zenodo.19646582](https://doi.org/10.5281/zenodo.19646582)
 
 The synthetic dataset was generated from a proprietary clinical dataset collected at the University of Padova, Italy, using the `synthpop` package (v1.9.2) in R. The original clinical dataset is not publicly available and will be the subject of a forthcoming clinical publication.
 
